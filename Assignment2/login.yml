@@ -1,0 +1,9 @@
+---
+
+- hosts: host
+  gather_facts: no
+  remote_user: ec2-user
+  become: true
+
+  roles: 
+   - users 
