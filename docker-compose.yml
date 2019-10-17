@@ -1,0 +1,14 @@
+version: '3'
+services:
+  redis-server:
+    image: 'redis:5.0.4'
+  nginx:
+    restart: always
+    build:
+      dockerfile: dockerfile
+      context: ./nginx
+    ports:
+      - "80:80"
+  node-app:
+    build: .
+    
